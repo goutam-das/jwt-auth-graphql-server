@@ -20,7 +20,8 @@ import { refreshToken } from './routers/refreshToken';
         // Create ApolloServer
         const apolloServer = new ApolloServer({
             schema,
-            context: ({ req, res }) => ({ req, res })
+            context: ({ req, res }) => ({ req, res }),
+            playground: true
         });
         // Create express server
         const app = express();
